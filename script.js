@@ -29,9 +29,9 @@ protocolList.add(values);
 
 var CSVProtocols = new XMLHttpRequest();
 CSVProtocols.open('GET', 'ctprotocols.csv');
-CSVProtocols.onreadystatechange = function() {
-	alert(CSVProtocols.responseText);
-};
+// CSVProtocols.onreadystatechange = function() {
+// 	alert(CSVProtocols.responseText);
+// };
 CSVProtocols.send();
 
 
