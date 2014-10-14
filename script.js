@@ -30,7 +30,7 @@ protocolList.remove({protNum: '0'});
 // CSV STUFF
 
 var CSVProtocols = new XMLHttpRequest();
-CSVProtocols.open('GET', 'ctprotocols.csv');
+CSVProtocols.open('GET', 'ctprotocols.csv', true);
 CSVProtocols.send();
 var CSVText = '', CSVLines = [];
 
