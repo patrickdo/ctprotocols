@@ -61,7 +61,7 @@ function addProtocols() {
 function parseCSV() {
 	var i, len;
 	for (i = 0, len = CSVLines.length; i < len; i++) {
-		CSVLines[i] = parseCSV(CSVLines[i]);
+		CSVLines[i] = parseCSV2(CSVLines[i]);
 	}
 }
 
@@ -86,7 +86,7 @@ function CSVtoArray(text) {
 }
 
 
-function parseCSV(str) {
+function parseCSV2(str) {
     var arr = [];
     var quote = false;  // true means we're inside a quoted field
 
