@@ -36,8 +36,13 @@ CSVProtocols.open('GET', 'ctprotocols.csv');
 // };
 CSVProtocols.send();
 var CSVText = '', CSVLines = [];
-// CSVText = ;
-CSVLines = CSVProtocols.responseText.split('\n');
+
+
+if (CSVProtocols.readyState == 4) {
+	CSVLines = CSVProtocols.responseText.split('\n');
+}
+
+// CSVLines = CSVProtocols.responseText.split('\n');
 var i, len;
 for (i = 0, len = CSVLines.length; i < len; i++) {
 	CSVLines[i] = CSVtoArray(CSVLines[i]);
