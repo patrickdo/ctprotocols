@@ -29,10 +29,9 @@ protocolList.remove({protNum: '0'});
 
 // CSV STUFF
 
-var CSVProtocols = new XMLHttpRequest();
+var CSVProtocols = new XMLHttpRequest(), CSVText = '', CSVLines = [];
 CSVProtocols.open('GET', 'ctprotocols.csv', true);
 CSVProtocols.send();
-var CSVText = '', CSVLines = [];
 
 CSVProtocols.onreadystatechange = function() {
 	if (CSVProtocols.readyState == 4) {	// have to wait for AJAX call to complete
