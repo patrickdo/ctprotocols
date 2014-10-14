@@ -37,17 +37,26 @@ CSVProtocols.open('GET', 'ctprotocols.csv');
 CSVProtocols.send();
 var CSVText = '', CSVLines = [];
 
+CSVProtocols.onreadystatechange = function() {
+	if (CSVProtocols.readyState == 4) {	// have to wait for AJAX call to complete
+		CSVLines = CSVProtocols.responseText.split('\n');
+		parseCSV();
+		addProtocols();
+	}
+};
 
-if (CSVProtocols.readyState == 4) {
-	CSVLines = CSVProtocols.responseText.split('\n');
+
+function addProtocols() {
+
 }
 
 // CSVLines = CSVProtocols.responseText.split('\n');
-var i, len;
-for (i = 0, len = CSVLines.length; i < len; i++) {
-	CSVLines[i] = CSVtoArray(CSVLines[i]);
+function parseCSV() {
+	var i, len;
+	for (i = 0, len = CSVLines.length; i < len; i++) {
+		CSVLines[i] = CSVtoArray(CSVLines[i]);
+	}
 }
-
 
 function CSVtoArray(text) {
 	var re_valid = /^\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*(?:,\s*(?:'[^'\\]*(?:\\[\S\s][^'\\]*)*'|"[^"\\]*(?:\\[\S\s][^"\\]*)*"|[^,'"\s\\]*(?:\s+[^,'"\s\\]+)*)\s*)*$/;
