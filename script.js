@@ -35,8 +35,9 @@ CSVProtocols.open('GET', 'ctprotocols.csv');
 // 	alert(CSVProtocols.responseText);
 // };
 CSVProtocols.send();
-var CSVText = CSVProtocols.responseText;
-var CSVLines = CSVText.split('\n');
+var CSVText, CSVLines;
+CSVText = CSVProtocols.responseText;
+CSVLines = CSVText.split('\n');
 var i, len;
 for (i = 0, len = CSVLines.length; i < len; i++) {
 	CSVLines[i] = CSVtoArray(CSVLines[i]);
