@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
-<from>JANI</from>
-<from>ALAP</from>
-<from>TEST</from>
-<from>BOAT</from>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<protocol>
+	<from>JANI</from>
+</protocol>
+<protocol>
+	<from>ALAP</from>
+</protocol>
+<protocol>
+	<from>TEST</from>
+</protocol>
+<protocol>
+	<from>BOAT</from>
+</protocol>
