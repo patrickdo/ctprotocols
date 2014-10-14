@@ -1,0 +1,57 @@
+
+table {
+	border: 1px solid #CCC;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 10px;
+	border: 1px solid #ccc;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+th {
+	/*background-color: #3f51b5;*/
+	background-color: #2C8CEB;
+	color: #FFF;
+	font-weight: bold;
+	padding: 4px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:left;
+}
+
+tbody tr:nth-child(odd) {
+	/*background: #dcdcdc;*/
+	background: #e8eaf6;
+}
+
+tbody tr:hover {
+	/*background: #acacac;*/
+	background: #d0d9ff;
+}
+
+.numberCol {
+	width:10%;
+}
+
+.descriptionCol {
+	width:20%;
+}
+
+.indicationsCol {
+	width:30%;
+}
+
+.protocolCol {
+	width:40%;
+}
+
+.search {
+	background: #ffffff url(http://cdn.sstatic.net/img/share-sprite-new.png) no-repeat -269px -92px;
+	padding-left: 22px !important;
+	height:20px;
+	line-height: 20px;
+	font-size:16px;
+}
