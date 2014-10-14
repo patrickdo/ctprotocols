@@ -34,7 +34,7 @@ CSVProtocols.open('GET', 'ctprotocols.csv', true);
 CSVProtocols.send();
 
 CSVProtocols.onreadystatechange = function() {
-	if (CSVProtocols.readyState == 4) {	// have to wait for AJAX call to complete
+	if (CSVProtocols.readyState === 4) {	// have to wait for AJAX call to complete
 		CSVLines = CSVProtocols.responseText.split('\n');
 		parseCSV();
 		addProtocols();
