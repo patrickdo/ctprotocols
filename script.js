@@ -56,7 +56,7 @@ function addProtocols() {
 
 function parseCSV() {
 	var i, len;
-	for (i = 0, len = CSVLines.length; i < len; i++) {
+	for (i = 1, len = CSVLines.length; i < len; i++) {
 		CSVLines[i] = CSVtoArray(CSVLines[i]);
 	}
 }
