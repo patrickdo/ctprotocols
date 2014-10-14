@@ -61,7 +61,7 @@ function addProtocols() {
 function parseCSV() {
 	var i, len;
 	for (i = 0, len = CSVLines.length; i < len; i++) {
-		CSVLines[i] = parseCSV2(CSVLines[i]);
+		CSVLines[i] = CSVLines[i].csvToArray();
 	}
 }
 
@@ -86,33 +86,67 @@ function CSVtoArray(text) {
 }
 
 
-function parseCSV2(str) {
-    var arr = [];
-    var quote = false;  // true means we're inside a quoted field
-
-    // iterate over each character, keep track of current row and column (of the returned array)
-    for (var row =0, col =0, c = 0; c < str.length; c++) {
-        var cc = str[c], nc = str[c+1];        // current character, next character
-        arr[row] = arr[row] || [];             // create a new row if necessary
-        arr[row][col] = arr[row][col] || '';   // create a new column (start with empty string) if necessary
-
-        // If the current character is a quotation mark, and we're inside a
-        // quoted field, and the next character is also a quotation mark,
-        // add a quotation mark to the current column and skip the next character
-        if (cc == '"' && quote && nc == '"') { arr[row][col] += cc; ++c; continue; }
-
-        // If it's just one quotation mark, begin/end quoted field
-        if (cc == '"') { quote = !quote; continue; }
-
-        // If it's a comma and we're not in a quoted field, move on to the next column
-        if (cc == ',' && !quote) { ++col; continue; }
-
-        // If it's a newline and we're not in a quoted field, move on to the next
-        // row and move to column 0 of that new row
-        if (cc == '\n' && !quote) { ++row; col = 0; continue; }
-
-        // Otherwise, append the current character to the current column
-        arr[row][col] += cc;
+String.prototype.csvToArray = function (o) {
+    var od = {
+        'fSep': ',',
+        'rSep': '\r\n',
+        'quot': '"',
+        'head': false,
+        'trim': false
+    };
+    if (o) {
+        for (var i in od) {
+            if (!o[i]) o[i] = od[i];
+        }
+    } else {
+        o = od;
     }
-    return arr;
-}
+    var a = [
+        ['']
+    ];
+    for (var r = f = p = q = 0; p < this.length; p++) {
+        switch (c = this.charAt(p)) {
+        case o.quot:
+            if (q && this.charAt(p + 1) == o.quot) {
+                a[r][f] += o.quot;
+                ++p;
+            } else {
+                q ^= 1;
+            }
+            break;
+        case o.fSep:
+            if (!q) {
+                if (o.trim) {
+                    a[r][f] = a[r][f].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+                }
+                a[r][++f] = '';
+            } else {
+                a[r][f] += c;
+            }
+            break;
+        case o.rSep.charAt(0):
+            if (!q && (!o.rSep.charAt(1) || (o.rSep.charAt(1) && o.rSep.charAt(1) == this.charAt(p + 1)))) {
+                if (o.trim) {
+                    a[r][f] = a[r][f].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+                }
+                a[++r] = [''];
+                a[r][f = 0] = '';
+                if (o.rSep.charAt(1)) {
+                    ++p;
+                }
+            } else {
+                a[r][f] += c;
+            }
+            break;
+        default:
+            a[r][f] += c;
+        }
+    }
+    if (o.head) {
+        a.shift();
+    }
+    if (a[a.length - 1].length < a[0].length) {
+        a.pop();
+    }
+    return a;
+};
