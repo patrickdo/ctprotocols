@@ -35,7 +35,7 @@ CSVProtocols.open('GET', 'ctprotocols.csv');
 // 	alert(CSVProtocols.responseText);
 // };
 CSVProtocols.send();
-var CSVText, CSVLines;
+var CSVText = '', CSVLines = [];
 CSVText = CSVProtocols.responseText;
 CSVLines = CSVText.split('\n');
 var i, len;
