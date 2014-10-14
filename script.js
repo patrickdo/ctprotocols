@@ -61,7 +61,7 @@ function addProtocols() {
 function parseCSV() {
 	var i, len;
 	for (i = 0, len = CSVLines.length; i < len; i++) {
-		CSVLines[i] = CSVLines[i].csvToArray();
+		CSVLines[i] = CSVtoArray(CSVLines[i]);
 	}
 }
 
@@ -86,67 +86,3 @@ function CSVtoArray(text) {
 }
 
 
-String.prototype.csvToArray = function (o) {
-    var od = {
-        'fSep': ',',
-        'rSep': '\r\n',
-        'quot': '"',
-        'head': false,
-        'trim': false
-    };
-    if (o) {
-        for (var i in od) {
-            if (!o[i]) o[i] = od[i];
-        }
-    } else {
-        o = od;
-    }
-    var a = [
-        ['']
-    ];
-    for (var r = f = p = q = 0; p < this.length; p++) {
-        switch (c = this.charAt(p)) {
-        case o.quot:
-            if (q && this.charAt(p + 1) == o.quot) {
-                a[r][f] += o.quot;
-                ++p;
-            } else {
-                q ^= 1;
-            }
-            break;
-        case o.fSep:
-            if (!q) {
-                if (o.trim) {
-                    a[r][f] = a[r][f].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-                }
-                a[r][++f] = '';
-            } else {
-                a[r][f] += c;
-            }
-            break;
-        case o.rSep.charAt(0):
-            if (!q && (!o.rSep.charAt(1) || (o.rSep.charAt(1) && o.rSep.charAt(1) == this.charAt(p + 1)))) {
-                if (o.trim) {
-                    a[r][f] = a[r][f].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
-                }
-                a[++r] = [''];
-                a[r][f = 0] = '';
-                if (o.rSep.charAt(1)) {
-                    ++p;
-                }
-            } else {
-                a[r][f] += c;
-            }
-            break;
-        default:
-            a[r][f] += c;
-        }
-    }
-    if (o.head) {
-        a.shift();
-    }
-    if (a[a.length - 1].length < a[0].length) {
-        a.pop();
-    }
-    return a;
-};
