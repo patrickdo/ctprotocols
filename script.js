@@ -91,7 +91,7 @@ function parseCSV2(str) {
     var quote = false;  // true means we're inside a quoted field
 
     // iterate over each character, keep track of current row and column (of the returned array)
-    for (var row = col = c = 0; c < str.length; c++) {
+    for (var row =0, col =0, c = 0; c < str.length; c++) {
         var cc = str[c], nc = str[c+1];        // current character, next character
         arr[row] = arr[row] || [];             // create a new row if necessary
         arr[row][col] = arr[row][col] || '';   // create a new column (start with empty string) if necessary
