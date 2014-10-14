@@ -1,0 +1,97 @@
+#,Description,Indications,MDCT Protocol
+CT 1,"CT Head non-contrast, Normal","R/O bleed, mass, trauma,","Head w/o, 4.5 mm axial"
+CT 2,CT Head w/ only,"Mass, infection","Same as above, w/ con"
+CT 3,CT Head w/o & w/,"Mass, Known CA, HIV","Same as above, w/ con"
+CT 4,CT Sella w/,"Pituitary pathology, if MRI cannot be performed","Sella 1/1 coronal w/ sagittal reformats, then head w/"
+CT 10,CT Sinus,Sinus disease,Sinus 3 mm coronals
+CT 11,"CT Face/Sinus, Trauma",Facial trauma,"Face 1 mm axial, w/ sagittal & coronal reformats"
+CT 12,,"Facial mass, infection","Face 3/2 w/ con, coronal reformats if requested"
+CT 15,CT Orbits Trauma,"Orbital trauma, Preop",Orbits 1/1 axial w/coronal reformats
+CT 15A,"Head, Orbits w/o",Head + Orbits (Trauma),"Head w/o, then orbits axial 1/1, w/ coronal reformats"
+CT 15B,"Head, Orbits w/o w/ coronal reformats","mass, Known CA, HIV",N/A
+CT 15C,"Head w & w/o, Orbits w/","Head + Orbits w/ contrast, for infection or staging","Head w/o, then orbits w/ con axial 3/2, then head w/"
+CT 16,Orbits w/ con,"Orbits w/ contrast, Infection or Mass","Orbits w/ con, 1/1 axial w/coronal reformats"
+CT 20,Temporal bones w/o,"Temporal Bones, Trauma",Temporal bones 1/1 axial w/coronal reformats
+CT 21,Temporal bones w/,"infection, Cholesteatoma, Mass",N/A
+CT 25,"Neck, soft tissue","Infection, Staging, Mass","Neck w/ con, axial 3/3"
+CT 26,Larynx w/o,Laryngeal injury or mass,"Larynx w/o con, axial 1/1"
+CT 31,Chest w/ con only,"Mass, Staging, Infection","Chest w/ con, axial 5/5"
+CT 32,Chest w/o con,Nodule F/U,"Chest w/o, axial 5/5"
+CT 34,HRCT + non con chest,Interstitial lung disease,"Chest w/o, axial 5/5 + HRCT (1/10) supine & prone with 3 expiratory views"
+CT 34A,HRCT only,Followup Interstitial lung disease,HRCT (1/10) supine & prone with 3 expiratory views
+CT 40,"C/AP w/ con, liver non con","Staging, Mass <--GONE USE 41","Liver w/o, axial 5/5, then C/A/P w/ con, axial 5/5"
+CT 41,C/A/P w/ con,"Infection, trauma","C/A/P w/ con, axial 5/5"
+CT 44,R/O appy,Appendicitis,"A/P w/ con, axial 3/3"
+CT 44A,44+ delayed venous,"for trauma, TCC staging",
+CT 44B,"R/O appy, pregnant patients",Appendicitis in pregnancy (consider MRI),"A/P noncon, axial 3/3"
+CT 45,Triphasic Liver,"Liver mass characterization, Hepatoma, Portal vein thrombosis, Hypervascular mets","Liver w/ con, axial 5/5 noncon, axial 1.5/1.5 arterial, axial 2.5/2.5 venous, axial 5/5 (3 min delays)"
+CT 45A,Triphasic Liver + Pelvis,Above + needs pelvis for staging,"Liver w/ con, axial 5/5 noncon, axial 1.5/1.5 arterial, axial 2.5/2.5 venous, axial 5/5 (3 min delays), then pelvis axial 5/5"
+CT 50,Pancreatic mass,Pancreatic mass eval or staging for pancreatic CA - Please do not use this for pancreatitis (Use #43),"Pancreas & liver w/ con, axial 5/5 non con, axial 1.5/1.5 arterial, axial 3/3 venous"
+CT 50A,Pancreatic mass + Pelvis,Above + needs pelvis for staging,"Pancreas & liver w/ con, axial 5/5 non con, axial 1.5/1.5 arterial, axial 3/3 venous, then pelvis axial 5/5"
+CT 55,Renal Stone,"Flank pain, Renal stones (for painless hematuria, please use CTIVP, # 57)","Kidneys to pubic symphysis noncon, axial 3/2"
+CT 56,Renal Mass,Renal mass characterization or staging for RCC,"Kidneys w/o & w/ con, axial noncon 5/5, post con 3/1.5 nephrographic phase (90secs), delayed axial 5/5"
+CT 57,CT IVP,"Painless hematuria, known TCC of the collection system or bladder","Kidneys w/o con, axial 3/3, after contrast (dual phase injection) axial 1.5/1.5 through kids w/ compression, thru pelvis w/o compression axial 1.5/1.5"
+CT 58,CT Cystogram,Bladder injury or urethral injury,"Pelvis w/o, axial 3/3, after gravity drip (50 cc CystoHypaque in 500cc bag of saline) until drip stops or bag is empty"
+CT 59,CT Crossing Vessel,UPJ Obstruction - looking for crossing vessel (to be ordered by Urology),"Kids noncon 5/5, Dual phase injection w/post con 3/3, additional delays 5/5 if needed"
+CT 60,Adrenal non con,Adrenal mass characterization (adenoma) <-- GONE USE 61,"Adrenals w/o con, axial 3/1.5"
+CT 61,Adrenal postcon only,Adrenal mass characterization after non con protocol is inconclusive,"Adrenals w/ con, axial 3/1.5 at 70 secs, delays 10 mins, axial 3/1.5"
+CT 65,Rectal staging,,
+CT 66,CT Enteroclysis,Small bowel pathology,"A/P w/ con, axial 3/3 after 1500cc of VOLUMEN oral contrast, coronal reformats"
+CT 70,C-spine CT,"C-spine, trauma","C-spine w/o, axial 3/3 w/coronal & sagittal reformats"
+CT 71,L-spine CT,L-spine trauma or disc disease,"L-spine w/o, axial 3/3 w/coronal & sagittal reformats"
+CT 72,T-spine CT,"Spine - trauma, post-op, hardware check","Spine (need to specify level) noncon, axial 3/3 w/ coronal & sagittal reformats"
+CT 73,"Spine, specific level","Spine - infection, abscess","Spine (need to specify level) w/ con, axial 3/3 w/ coronal & sagittal reformats"
+CT 75,Pelvis non con,Pelvic Trauma,"Pelvis w/o, axial 3/3 with sag & cor reformats"
+CT 80,Upper Extremity non con,Upper extremity - fracture,"Upper extremity w/o, axial 1/1 w/ sag & cor reformats"
+CT 81,Upper Extremity w/ con,"Upper extremity - mass evaluation, infection, abscess","Upper extremity w/ con, axial 5/5"
+CT 85,Lower Extremity non con,Lower extremity - fracture,"Lower extremity w/o, axial 1/1 w/ sag & cor reformats"
+CT 86,Lower Extremity w/ con,"Lower extremity - mass evaluation, infection, abscess","Lower extremity w/ con, axial 5/5"
+CT 90,CT Pelvimetry,Pelvimetry,3 images of the pelvis
+CT 91,Voxel Study,Voxel Study,
+CT 92,Neuro Stealth,Neuro Stealth - Preop,1 mm axial postcon
+CT 93,ENT Stealth,ENT Stealth - Preop,1 mm axial noncon
+CT 100,CTA COW,"COW CTA - Aneurysm, stenosis, Vasospasm, AVM","Head (COW), non con axial 3/3, post con axial 0.75/0.5 with cor & sag reformats, ROI on internal carotid artery at mid-neck"
+CT 101,CTA Neck only,"Carotids Neck CTA - use sparingly - if there is a chance of stenosis or dissection, use #102 (Neck + COW)","Neck (carotids), non con axial 3/3, post con axial 1.5/0.75 w/ cor & sag reformats, ROI on aortic arch"
+CT 102,CTA Neck + COW,"COW + Carotids (neck) CTA - trauma, dissection, stenosis,","Neck (carotids) + COW, non con axial 3/3, post con axial 1.5/0.75 w/ cor & sag reformats, ROI on internal carotid artery at mid neck"
+CT 103,CTV Head,Brain CTV Sinus venous thrombosis,"Head (COW), non con axial 3/3, post con axial 0.75/0.5 with cor & sag reformats"
+CT 105,CTA Chest - for PE,PE Protocol,"Chest w/ con axial 1.5/0/75 w/ cor & sag reformats, ROI on main PA"
+CT 105A,CTA Chest - for PE w/DVT study,PE + DVT study - only if requested by clinician,"Chest w/ con axial 1.5/0/75 w/ cor & sag reformats, pelvis and thigh post con axial 5/5, ROI on main PA"
+CT 105B,CTA Chest - for Pulm HTN,PE + HRCT for Pulm HTN,"Chest w/ con axial 1.5/0/75 w/ cor & sag reformats, Chest noncon 1/10 in insp. & exp. Phases, ROI on main PA"
+CT 105C,CTA Chest - for PE for pregnant patients,PE - low mAs & abdominal shielding for pregnant patients,"Chest w/ con axial 1.5/0/75 w/ cor & sag reformats, low mA technique, ROI on main PA"
+CT 106,CTA Chest - Aorta,"Chest CTA - aortic trauma, dissection (although consider CTA C/A/P if dissection likely, to include the abdomen)","Chest w/o con, axial 5/5, postcon chest axial 1.5/1.5, w/ sag & cor reformats, abdomen/pelvis con axial 5/5, ROI on aortic arch"
+CT 106A,CTA Chest w/ abd/pel,Chest CTA + reg abd / pel (for trauma),"Chest w/o con, axial 5/5, postcon chest axial 1.5/1.5, w/ sag & cor reformats, abdomen/pelvis con axial 5/5, ROI on aortic arch"
+CT 106B,106+ gated,,
+CT 107,CTV neck and upper chest,"CT venogram for great vessels, please put IV in the opposite arm from area of concern","Mid neck to mid heart, axial 3/3, 2-part injection,with delay of 75 secs for venous opacification"
+CT 130,CTA C/A/P,"C/A/P CTA - dissection, aneurysm","C/A/P w/o, axial 5/5, post con C/A/P axial 1.5/1.5 w/ sag & cor reformats, ROI on descending thoracic aorta at the level of the midheart"
+CT 131,CTA C/A/P - Stent,C/A/P CTA - for STENTS ONLY,"C/A/P w/o, axial 5/5, post con C/A/P axial 1.5/1.5, delays at 2 mins thru stent axial 3/3 w/ sag & cor reformats, ROI on descending thoracic aorta at the level of the midheart"
+CT 140,CTA A/P,"CTA A/P - dissection (consider CTA C/A/P #130 for possible dissection to include chest ), anuerysm","A/P w/o, axial 5/5, post con A/P axial 1.5/1.5 w/ sag & cor reformats, ROI on abdominal aorta at diaphragm"
+CT 141,CTA A/P- Stent,CTA A/P - for STENTS ONLY,"A/P w/o, axial 5/5, post con A/P axial 1.5/1.5, delays at 2 mins thru stent axial 3/3 w/ sag & cor reformats, ROI on abdominal aorta at diaphragm"
+CT 142,CTA Renal Arteries,"CTA Renal Artery Stenosis - for chronic renal insufficeincy, consider adding the venous phase","Abdomen noncon, axial 3/3, post con axial 1.5/0.75 (arterial), axial 1.5/1.5 (venous ONLY IF REQUESTED) w/ cor & sag reformats, ROI on abdominal aorta at diaphragm"
+CT 143,CTA Mesenteric Vessels,CTA for mesenteric ischemia,"Abdomen & pelvis noncon, axial 3/3, post con axial 1.5/0.75 (arterial), axial 1.5/1.5 (venous) w/ cor & sag reformats, ROI on abdominal aorta at diaphragm"
+CT 150,CTA pelvis + BLE runoff,Bilat LE runoff,"abd/Pelvis + BLE noncon 5/5, post con 3/3 w/cor & sag reformats, ROI at the aortic bifurcation"
+CT 151,CTA single LE,single LE runoff,"Abd/Pelvis + BLE noncon 5/5, post con 3/3 w/cor & sag reformats, ROI at the aortic bifurcation"
+CT 152,CTA single UE,"Single UE runoff - please specify area of concern (i.e. brachial artery, etc.) - also needs IV in opposite arm","UE noncon 5/5, postcon 3/3 w/ cor & sag reformats, ROI at arotic arch"
+CT 155,CTV lower exremities,CTV pelvis and bilateral thighs,"Pelvis & bilateral thighs post con axial 3/3, 190s delay"
+CT 201,"Pedi Head CT, Non-con, Normal","R/O bleed, mass, trauma,","Head w/o, 3 mm axial"
+CT 201F,"Pedi Head CT, Non-con, Normal",Followup known abnormality ONLY,"Head w/o, 3 mm axial"
+CT 202,"Pedi CT Head w/o & w/,","Mass, Known CA, HIV","Same as above, w/ con"
+CT 203,"Pedi Head CT, Non-con, Craniosynostosis",Suspected craniosynostosis,"Head w/o, 1/1 mm"
+CT 210,Pedi CT Sinus,Sinus disease,Sinus 3 mm coronals
+CT 220,Pedi Temporal bones,Temporal Bones,Temporal bones 0.6/0.4 axial w/coronal reformats
+CT 222,Pedi Inner Ear,Inner ear malformations,"Inner Ear axial 0.6/0.6, with coronal & sagittal reformats & 3D images"
+CT 225,"Pedi Neck, soft tissue","Infection, Staging, Mass","Neck w/ con, axial 3/3 or 2/2"
+CT 231,Pedi Chest w/ con only,"Mass, Staging, Infection","Chest w/ con, axial 5/5 or 3/3"
+CT 232,Pedi Chest w/o con,"Nodule F/U, Parenchymal changes","Chest w/o, axial 5/5 or 3/3"
+CT 233,Pedi HRCT + non con chest,Bronchiectasis or air trapping,"Chest w/o, axial 5/5 + HRCT (1/10) supine with 3 expiratory views"
+CT 233A,Pedi HRCT only,Followup bronchiectasis or air trapping,HRCT (1/10) supine with 3 expiratory views
+CT 234,Pedi HRCT + non con chest,Interstitial lung disease,"Chest w/o, axial 5/5 + HRCT (1/10) supine & prone with 3 expiratory views"
+CT 234A,Pedi HRCT only,Followup Interstitial lung disease,HRCT (1/10) supine & prone with 3 expiratory views
+CT 243,Pedi A/P w/ con,"Infection, trauma, generalized abdominal pain, pancreatitis, if looking for abscess, please protocol w/ oral & rectal contrast on MDCT as well","A/P w/ con, axial 5/5 or 3/3"
+CT 244,R/O appy,Appendicitis,"A/P w/ con, axial 3/3"
+CT 270,Pedi C-spine CT,"C-spine, trauma","C-spine w/o, axial 1/1 w/coronal & sagittal reformats"
+CT 271,Pedi L spine CT,Trauma,Same as above for L-spine
+CT 272,Pedi T spine CT,"Spine - trauma, post-op, hardware check","Spine (need to specify level) noncon, axial 3/3 w/ coronal & sagittal reformats"
+CT 275,Pedi Pelvis non con,Pelvic Trauma,"Pelvis w/o, axial 3/3 with sag & cor reformats"
+CT 280,Pedi Upper Extremity non con,Upper extremity - fracture,"Upper extremity w/o, axial 1/1 w/ sag & cor reformats"
+CT 280A,Pedi Shoulder,Shoulder - fracture - has a higher mAs and larger FOV than routine upper extremity,"Shoulder w/o, axial 1/1 w/ sag & cor reformats"
+CT 285,Pedi Lower Extremity non con,Lower extremity - fracture,"Lower extremity w/o, axial 1/1 w/ sag & cor reformats"
