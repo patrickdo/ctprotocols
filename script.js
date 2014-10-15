@@ -17,7 +17,7 @@ var options = {
 
 var protocolList = new List('protocolDIV', options);
 protocolList.remove({protNum: '0'});
-protocolList.remove({protNum: undefined});
+protocolList.remove({protNum: ''});
 
 // protocolList.add({
 // 	protNum: '284',
@@ -39,15 +39,12 @@ CSVProtocols.onreadystatechange = function() {
 		CSVLines = CSVProtocols.responseText.split('\n');
 		parseCSV();
 		addProtocols();
-		// protocolList.remove('protNum', '0');
-		// protocolList.remove({protNum: '0'});
-		// protocolList.remove({protNum: 'undefined'});
 	}
 };
 
 function addProtocols() {
 	var i, len;
-	for (i = 1, len = CSVLines.length; i < len - 1; i++) {
+	for (i = 1, len = CSVLines.length; i < len; i++) {
 		protocolList.add({
 			protNum: CSVLines[i][0],
 			protDesc: CSVLines[i][1],
