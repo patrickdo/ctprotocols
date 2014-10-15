@@ -16,7 +16,7 @@ var options = {
 // ];
 
 var protocolList = new List('protocolDIV', options);
-protocolList.remove({protNum: '0'});
+// protocolList.remove({protNum: '0'});
 
 // protocolList.add({
 // 	protNum: '284',
