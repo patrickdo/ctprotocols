@@ -47,7 +47,7 @@ CSVProtocols.onreadystatechange = function() {
 
 function addProtocols() {
 	var i, len;
-	for (i = 1, len = CSVLines.length; i < len; i++) {
+	for (i = 1, len = CSVLines.length; i < len - 1; i++) {
 		protocolList.add({
 			protNum: CSVLines[i][0],
 			protDesc: CSVLines[i][1],
