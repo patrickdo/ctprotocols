@@ -38,6 +38,8 @@ CSVProtocols.onreadystatechange = function() {
 		CSVLines = CSVProtocols.responseText.split('\n');
 		parseCSV();
 		addProtocols();
+		protocolList.remove({protNum: '0'});
+		protocolList.remove({protNum: 'undefined'});
 	}
 };
 
