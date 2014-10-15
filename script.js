@@ -39,7 +39,7 @@ CSVProtocols.onreadystatechange = function() {
 		parseCSV();
 		addProtocols();
 		protocolList.remove({protNum: '0'});
-		protocolList.remove({protNum: 'undefined'});
+		// protocolList.remove({protNum: 'undefined'});
 	}
 };
 
