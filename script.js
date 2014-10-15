@@ -32,6 +32,7 @@ protocolList.remove({protNum: ''});
 
 var CSVProtocols = new XMLHttpRequest(), CSVText = '', CSVLines = [];
 CSVProtocols.open('GET', 'ctprotocols.csv', true);
+CSVProtocols.overrideMimeType("text/plain");
 CSVProtocols.send();
 
 CSVProtocols.onreadystatechange = function() {
