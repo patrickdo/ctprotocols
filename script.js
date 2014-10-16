@@ -76,8 +76,8 @@ function CSVtoArray(text) {
 			// Remove backslash from \" in double quoted values.
 			else if (m2 !== undefined) {a.push(m2.replace(/\\"/g, '"'));}
 			else if (m3 !== undefined) {a.push(m3);}
-			else
-			{return '';}	// Return empty string. ???
+			// else
+			// {return '';}	// Return empty string. ???
 		});
 	// Handle special case of empty last value.
 	if (/,\s*$/.test(text)) {a.push('');}
