@@ -8,7 +8,8 @@
 // STUFF THAT WORKS
 
 var options = {
-	valueNames: ['protNum', 'protDesc', 'protIndic', 'protMDCT']
+	valueNames: ['protNum', 'protDesc', 'protIndic', 'protMDCT'],
+	page: [2000]
 };
 
 // var values = [
