@@ -6,7 +6,7 @@ var options = {
 var protocolList = new List('protocolDIV', options);
 
 // CSV STUFF
-var CSVProtocols = new XMLHttpRequest(), CSVText = '', CSVLines = [];
+var CSVProtocols = new XMLHttpRequest(), CSVLines = [];
 CSVProtocols.open('GET', 'ctprotocols.csv', true);
 CSVProtocols.overrideMimeType("text/plain");
 CSVProtocols.send();
