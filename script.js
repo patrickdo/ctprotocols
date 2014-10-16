@@ -84,21 +84,23 @@ function CSVtoArray(text) {
 	return a;
 }
 
-function csv2array(data, delimeter) {
-	// Retrieve the delimeter
-	if (delimeter === undefined) delimeter = ',';
-	if (delimeter && delimeter.length > 1) delimeter = ',';
+function csv2array(data, delimiter) {
+	// Retrieve the delimiter
+	if (delimiter === undefined) {
+		delimiter = ',';
+	}
+	if (delimiter && delimiter.length > 1) {
+		delimiter = ',';
+	}
 
 	// initialize variables
 	var	newline = '\n',
 		eof = '',
 		i = 0,
 		c = data.charAt(i),
-		col = 0,
 		array = [];
 
 	while (c != eof) {
-
 		// get value
 		var value = "";
 		if (c == '\"') {
@@ -123,8 +125,7 @@ function csv2array(data, delimeter) {
 						c = data.charAt(i);
 					}
 				}
-			}
-			while (c != eof && c != '\"');
+			} while (c != eof && c != '\"');
 
 			if (c == eof) {
 				throw "Unexpected end of data, double-quote expected";
@@ -133,7 +134,7 @@ function csv2array(data, delimeter) {
 			c = data.charAt(++i);
 		} else {
 			// value without quotes
-			while (c != eof && c != delimeter && c!= newline && c != '\t' && c != '\r') {
+			while (c != eof && c != delimiter && c!= newline && c != '\t' && c != '\r') {
 				value += c;
 				c = data.charAt(++i);
 			}
@@ -141,12 +142,8 @@ function csv2array(data, delimeter) {
 
 		array.push(value);
 
-		// go to the next row or column
-		if (c == delimeter) {
-			// to the next column
-			col++;
-		} else if (c != eof) {
-			// unexpected character
+		// unexpected character
+		if (c != eof) {
 			throw "Delimiter expected after character " + i;
 		}
 
