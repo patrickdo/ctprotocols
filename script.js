@@ -4,7 +4,7 @@ var options = {
 };
 
 var protocolList = new List('protocolDIV', options);
-// protocolList.remove({protNum: '0'});
+protocolList.remove('protNum', '0');	// remove first blank entry (template)
 
 // CSV STUFF
 var CSVProtocols = new XMLHttpRequest(), CSVText = '', CSVLines = [];
