@@ -22,8 +22,8 @@ CSVProtocols.onreadystatechange = function() {
 };
 
 function parseCSV() {
-	var i, len;
-	for (i = 1, len = CSVLines.length; i < len; i++) {
+	var i, len = CSVLines.length;
+	for (i = 1; i < len; i++) {
 		CSVLines[i] = CSVtoArray(CSVLines[i]);
 	}
 }
