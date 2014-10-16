@@ -85,84 +85,74 @@ function CSVtoArray(text) {
 }
 
 function csv2array(data, delimeter) {
-  // Retrieve the delimeter
-  if (delimeter === undefined)
-    delimeter = ',';
-  if (delimeter && delimeter.length > 1)
-    delimeter = ',';
+	// Retrieve the delimeter
+	if (delimeter === undefined) delimeter = ',';
+	if (delimeter && delimeter.length > 1) delimeter = ',';
 
-  // initialize variables
-  var	newline = '\n',
-  		eof = '',
-  		i = 0,
-  		c = data.charAt(i),
-  		row = 0,
-  		col = 0,
-  		array = [];
+	// initialize variables
+	var	newline = '\n',
+		eof = '',
+		i = 0,
+		c = data.charAt(i),
+		col = 0,
+		array = [];
 
-  while (c != eof) {
+	while (c != eof) {
 
-    // get value
-    var value = "";
-    if (c == '\"') {
-      // value enclosed by double-quotes
-      c = data.charAt(++i);
+		// get value
+		var value = "";
+		if (c == '\"') {
+			// value enclosed by double-quotes
+			c = data.charAt(++i);
 
-      do {
-        if (c != '\"') {
-          // read a regular character and go to the next character
-          value += c;
-          c = data.charAt(++i);
-        }
+			do {
+				if (c != '\"') {
+					// read a regular character and go to the next character
+					value += c;
+					c = data.charAt(++i);
+				}
 
-        if (c == '\"') {
-          // check for escaped double-quote
-          var cnext = data.charAt(i+1);
-          if (cnext == '\"') {
-            // this is an escaped double-quote.
-            // Add a double-quote to the value, and move two characters ahead.
-            value += '\"';
-            i += 2;
-            c = data.charAt(i);
-          }
-        }
-      }
-      while (c != eof && c != '\"');
+				if (c == '\"') {
+					// check for escaped double-quote
+					var cnext = data.charAt(i+1);
+					if (cnext == '\"') {
+						// this is an escaped double-quote.
+						// Add a double-quote to the value, and move two characters ahead.
+						value += '\"';
+						i += 2;
+						c = data.charAt(i);
+					}
+				}
+			}
+			while (c != eof && c != '\"');
 
-      if (c == eof) {
-        throw "Unexpected end of data, double-quote expected";
-      }
+			if (c == eof) {
+				throw "Unexpected end of data, double-quote expected";
+			}
 
-      c = data.charAt(++i);
-    }
-    else {
-      // value without quotes
-      while (c != eof && c != delimeter && c!= newline && c != '\t' && c != '\r') {
-        value += c;
-        c = data.charAt(++i);
-      }
-    }
+			c = data.charAt(++i);
+		} else {
+			// value without quotes
+			while (c != eof && c != delimeter && c!= newline && c != '\t' && c != '\r') {
+				value += c;
+				c = data.charAt(++i);
+			}
+		}
 
-    array.push(value);
+		array.push(value);
 
-    // go to the next row or column
-    if (c == delimeter) {
-      // to the next column
-      col++;
-    }
-    else if (c == newline) {
-      // to the next row
-      col = 0;
-      // row++;
-    }
-    else if (c != eof) {
-      // unexpected character
-      throw "Delimiter expected after character " + i;
-    }
+		// go to the next row or column
+		if (c == delimeter) {
+			// to the next column
+			col++;
+		} else if (c != eof) {
+			// unexpected character
+			throw "Delimiter expected after character " + i;
+		}
 
-    // go to the next character
-    c = data.charAt(++i);
-  }
+		// go to the next character
+		c = data.charAt(++i);
+	}
 
-  return array;
+	return array;
 }
