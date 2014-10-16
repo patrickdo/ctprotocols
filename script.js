@@ -143,7 +143,7 @@ function csv2array(data, delimiter) {
 		array.push(value);
 
 		// unexpected character
-		if (c != eof) {
+		if (c !== delimiter && c != eof) {
 			throw "Delimiter expected after character " + i;
 		}
 
