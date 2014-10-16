@@ -98,7 +98,7 @@ function csv2array(data, delimeter) {
   var c = data.charAt(i);
   var row = 0;
   var col = 0;
-  var array = new Array();
+  var array = [];
 
   while (c != eof) {
     // skip whitespaces
@@ -148,9 +148,13 @@ function csv2array(data, delimeter) {
     }
 
     // add the value to the array
-    if (array.length <= row)
-      array.push(new Array());
-    array[row].push(value);
+    // if (array.length <= row)
+    //   array.push(new Array());
+    // array[row].push(value);
+    // if (array.length <= row)
+    //   array.push(new Array());
+    array.push(value);
+
 
     // skip whitespaces
     // while (c == ' ' || c == '\t' || c == '\r') {
