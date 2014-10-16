@@ -4,8 +4,6 @@ var options = {
 };
 
 var protocolList = new List('protocolDIV', options);
-// protocolList.remove('protNum', '0');	// remove first blank entry (template)
-protocolList.remove('protNum', '');
 
 // CSV STUFF
 var CSVProtocols = new XMLHttpRequest(), CSVText = '', CSVLines = [];
@@ -19,9 +17,8 @@ CSVProtocols.onreadystatechange = function() {
 		parseCSV();
 		addProtocols();
 	}
+	protocolList.remove('protNum', '');
 	protocolList.remove('protNum', undefined);
-
-	// protocolList.remove('protNum', '0' || undefined);
 };
 
 function parseCSV() {
