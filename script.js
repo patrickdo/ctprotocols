@@ -86,25 +86,21 @@ function CSVtoArray(text) {
 
 function csv2array(data, delimeter) {
   // Retrieve the delimeter
-  if (delimeter == undefined)
+  if (delimeter === undefined)
     delimeter = ',';
   if (delimeter && delimeter.length > 1)
     delimeter = ',';
 
   // initialize variables
-  var newline = '\n';
-  var eof = '';
-  var i = 0;
-  var c = data.charAt(i);
-  var row = 0;
-  var col = 0;
-  var array = [];
+  var	newline = '\n',
+  		eof = '',
+  		i = 0,
+  		c = data.charAt(i),
+  		row = 0,
+  		col = 0,
+  		array = [];
 
   while (c != eof) {
-    // skip whitespaces
-    // while (c == ' ' || c == '\t' || c == '\r') {
-    //   c = data.charAt(++i); // read next char
-    // }
 
     // get value
     var value = "";
@@ -147,19 +143,7 @@ function csv2array(data, delimeter) {
       }
     }
 
-    // add the value to the array
-    // if (array.length <= row)
-    //   array.push(new Array());
-    // array[row].push(value);
-    // if (array.length <= row)
-    //   array.push(new Array());
     array.push(value);
-
-
-    // skip whitespaces
-    // while (c == ' ' || c == '\t' || c == '\r') {
-    //   c = data.charAt(++i);
-    // }
 
     // go to the next row or column
     if (c == delimeter) {
