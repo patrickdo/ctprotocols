@@ -153,7 +153,7 @@ function csv2array(data, delimeter) {
     else if (c == newline) {
       // to the next row
       col = 0;
-      row++;
+      // row++;
     }
     else if (c != eof) {
       // unexpected character
