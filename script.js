@@ -29,8 +29,8 @@ function parseCSV() {
 }
 
 function addProtocols() {
-	var i, len;
-	for (i = 1, len = CSVLines.length; i < len; i++) {
+	var i, len = CSVLines.length;
+	for (i = 1; i < len; i++) {
 		protocolList.add({
 			protNum: CSVLines[i][0],
 			protDesc: CSVLines[i][1],
