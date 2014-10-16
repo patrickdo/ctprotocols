@@ -52,7 +52,7 @@ tbody tr:hover {
 
 .search {
 	/*background: #ffffff url('http://cdn.sstatic.net/img/share-sprite-new.png') no-repeat -269px -92px;*/
-	background: #ffffff url('https://cdn3.iconfinder.com/data/icons/iconic-1/32/magnifying_glass-128.png');
+	background: #ffffff url('https://cdn3.iconfinder.com/data/icons/iconic-1/32/magnifying_glass-128.png') 20px/20px;
 	padding-left: 22px !important;
 	height:20px;
 	line-height: 20px;
